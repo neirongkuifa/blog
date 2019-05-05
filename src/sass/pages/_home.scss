@@ -1,0 +1,122 @@
+.App {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+}
+
+.left {
+	display: inline-block;
+	padding: 5rem;
+	width: 75%;
+	height: 100%;
+	background: $color-secondary;
+	transform: translateX(-100%);
+	animation-name: moveInLeft;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+	overflow: hidden;
+	position: relative;
+	box-shadow: 2rem 1rem 2rem rgba($color-black, 0.6);
+
+	& .stamp {
+		position: absolute;
+		top: 10rem;
+		right: 10rem;
+		width: 5vw;
+		height: 5vw;
+		background-image: url(/zaimu.png);
+		background-size: cover;
+	}
+}
+
+.leaveLeft {
+	display: inline-block;
+	padding: 10rem 2rem 0rem 2rem;
+	width: 75%;
+	height: 100%;
+	background: $color-secondary;
+	animation-name: leaveHome-left;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+	overflow: hidden;
+	position: relative;
+
+	& .stamp {
+		margin: auto;
+		width: 5vw;
+		height: 5vw;
+		background-image: url(/zaimu.png);
+		background-size: cover;
+		z-index: 0;
+
+		&-pulse {
+			margin: auto;
+			width: 5vw;
+			height: 5vw;
+			background-image: url(/zaimu.png);
+			background-size: cover;
+			opacity: 0.3;
+			z-index: -1;
+			transform-style: preserve-3d;
+			animation-name: leaveHome-pulse;
+			animation-duration: 2s;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: infinite;
+		}
+	}
+}
+
+.right {
+	font-size: 15rem;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 25%;
+	height: 100%;
+	opacity: 0;
+	animation-name: showContent;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+	overflow: hidden;
+
+	& .char-container {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.leaveRight {
+	font-size: 15rem;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 25%;
+	height: 100%;
+	opacity: 0;
+	animation-name: leaveHome-right;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+	overflow: hidden;
+
+	& .char-container {
+		width: 100%;
+		height: 100%;
+	}
+
+	& .contact {
+		@include center;
+		font-size: 5rem;
+		font-family: 'songke';
+		opacity: 0;
+		animation-name: contact;
+		animation-duration: 1s;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+	}
+}

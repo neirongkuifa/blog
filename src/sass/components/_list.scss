@@ -1,0 +1,21 @@
+.list {
+	font-family: 'songke';
+	font-size: 4.5rem;
+	z-index: 2;
+	list-style: none;
+	@include center;
+
+	&__item {
+		padding: 1rem;
+		user-select: none;
+	}
+}
+
+.list:hover > .list__item {
+	color: $color-grey-1;
+}
+
+.list:hover > .list__item:hover {
+	color: $color-black;
+	transform: scale(1.1);
+}

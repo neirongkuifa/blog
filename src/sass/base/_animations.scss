@@ -1,0 +1,69 @@
+@keyframes moveIn {
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes moveInBottom {
+	20% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes moveInLeft {
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes showContent {
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes leaveHome-left {
+	100% {
+		width: 10%;
+	}
+}
+
+@keyframes leaveHome-right {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		width: 90%;
+		opacity: 1;
+	}
+}
+
+@keyframes leaveHome-pulse {
+	0% {
+		transform: translateZ(-1px) translateY(-100%) scale(1);
+	}
+	50% {
+		transform: translateZ(-1px) translateY(-100%) scale(1.2);
+	}
+	100% {
+		transform: translateZ(-1px) translateY(-100%) scale(1);
+	}
+}
+
+@keyframes contact {
+	0% {
+		opacity: 0;
+	}
+	70% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
